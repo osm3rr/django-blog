@@ -7,5 +7,8 @@
         <p>{{ publication.body }}</p>
     </article>
     <!-- link to update a publication -->
-    <a href="{% url 'publication-update' publication.pk %}">Editar</a>
+    <a href="{% url 'publication-update' publication.pk %}">Editar</a> |
+    
+    <!-- link to delete a publication -->
+    <a href="{% url 'publication-delete' publication.pk %}">Borrar</a>
 {% endblock content %}
