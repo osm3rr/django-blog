@@ -21,6 +21,13 @@
             <a href="{% url 'publication-create' %}">Nueva Publicación</a> 
         </div>
     </header>
+    {% if user.is_authenticated %}
+        <p>Hola {{ user.username }}!</p>
+    {% else %}
+        <p>Hola! No estás logueado. Inicia sesión a continuación</p>
+        <a href="{% url 'login' %}">Log In</a>
+    {% endif %}
+    
     <div>
         {% block content %}
         {% endblock content %}
