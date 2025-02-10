@@ -125,4 +125,7 @@ STATICFILES_DIRS = [BASE_DIR / "static"] # new
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Redirect to home URL after login
-LOGIN_REDIRECT_URL = "publications-list" # new
+LOGIN_REDIRECT_URL = "publications-list"
+
+# Redirect to home URL after logout
+LOGOUT_REDIRECT_URL = "publications-list" # new
